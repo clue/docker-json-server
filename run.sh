@@ -4,7 +4,6 @@ args="$@"
 
 args="$@ -p 80"
 
-echo "DB path used $DB_PATH"
 file=$DB_PATH
 
 if [ -f $file ]; then
