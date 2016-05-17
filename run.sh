@@ -4,10 +4,12 @@ args="$@"
 
 args="$@ -p 80"
 
-file=/data/db.json
+echo "DB path used $DB_PATH"
+file=$DB_PATH
+
 if [ -f $file ]; then
-    echo "Found db.json, trying to open"
-    args="$args db.json"
+    echo "Found $file, trying to open"
+    args="$args $file"
 fi
 
 file=/data/file.js
