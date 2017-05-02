@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 MAINTAINER Christian Lück <christian@lueck.tv>
 
 RUN npm install -g json-server
@@ -8,5 +8,5 @@ VOLUME /data
 
 EXPOSE 80
 ADD run.sh /run.sh
-ENTRYPOINT ["bash", "/run.sh"]
+ENTRYPOINT ["ash", "/run.sh"]
 CMD []
