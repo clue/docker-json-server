@@ -16,4 +16,10 @@ if [ -f $file ]; then
     args="$args file.js"
 fi
 
+file=/data/routes.json
+if [ -f $file ]; then
+    echo "Found routes.json , trying to open"
+    args="$args --routes routes.json"
+fi
+
 json-server $args
