@@ -2,12 +2,12 @@
 
 args="$@"
 
-args="$@ -p 80"
+args="$@ -p $PORT --host 0.0.0.0"
 
 file=/data/db.json
 if [ -f $file ]; then
     echo "Found db.json, trying to open"
-    args="$args db.json"
+    args="$args $file"
 fi
 
 file=/data/file.js
