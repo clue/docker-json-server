@@ -13,7 +13,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ docker run -d -p 80:80 -v /home/user/articles.json:/data/db.json clue/json-server
+$ docker run -d -p 80:80 -v /home/user:/data clue/json-server
 ```
 
 The above example exposes the JSON Server REST API on port 80, so that you can now browse to:
