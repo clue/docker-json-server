@@ -7,7 +7,13 @@ args="$@ -p 80"
 file=/data/db.json
 if [ -f $file ]; then
     echo "Found db.json, trying to open"
-    args="$args db.json"
+    args="$args  --watch db.json"
+fi
+
+file=/data/routes.json
+if [ -f $file ]; then
+    echo "Found routes.json, trying to open"
+    args="$args --routes routes.json"
 fi
 
 file=/data/file.js
